@@ -1,4 +1,4 @@
-package org.example.Entities;
+package org.example.entities;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
