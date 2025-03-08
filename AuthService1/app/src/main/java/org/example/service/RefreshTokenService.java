@@ -2,6 +2,7 @@ package org.example.service;
 
 import org.example.entities.RefreshToken;
 import org.example.entities.UserInfo;
+import org.example.model.UserInfoDto;
 import org.example.repository.RefreshTokenRepository;
 import org.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +40,9 @@ public class RefreshTokenService {
         }
         return token;
     }
+
+    public Optional<RefreshToken> findByToken(String token){
+        return refreshTokenRepository.findByToken(token);
+    }
+
 }
