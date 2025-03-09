@@ -1,4 +1,4 @@
-package org.example.request;
+package authservice.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AuthRequest {
+public class AuthRequestDTO {
     private String username;
     private String password;
 }

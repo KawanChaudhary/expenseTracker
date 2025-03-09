@@ -1,4 +1,4 @@
-package org.example.response;
+package authservice.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class JwtResponse {
+public class JwtResponseDTO {
 
     private String accessToken;
     private String token;
+    private String userId;
 }

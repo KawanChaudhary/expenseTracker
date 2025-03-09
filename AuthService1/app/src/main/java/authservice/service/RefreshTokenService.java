@@ -1,14 +1,12 @@
-package org.example.service;
+package authservice.service;
 
-import org.example.entities.RefreshToken;
-import org.example.entities.UserInfo;
-import org.example.model.UserInfoDto;
-import org.example.repository.RefreshTokenRepository;
-import org.example.repository.UserRepository;
+import authservice.entities.RefreshToken;
+import authservice.entities.UserInfo;
+import authservice.repository.RefreshTokenRepository;
+import authservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Ref;
 import java.time.Instant;
 import java.util.Optional;
 import java.util.UUID;

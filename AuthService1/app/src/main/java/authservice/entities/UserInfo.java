@@ -1,4 +1,4 @@
-package org.example.entities;
+package authservice.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

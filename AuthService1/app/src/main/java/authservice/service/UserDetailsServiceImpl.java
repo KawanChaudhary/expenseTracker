@@ -1,20 +1,20 @@
-package org.example.service;
+package authservice.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.example.entities.UserInfo;
-import org.example.model.UserInfoDto;
-import org.example.repository.UserRepository;
+import authservice.entities.UserInfo;
+import authservice.model.UserInfoDto;
+import authservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 @Component
@@ -54,5 +54,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 .build();
         userRepository.save(userInfo);
         return true;
+    }
+
+    public String getUserByUsername(String userName){
+        return Optional.of(userRepository.findByUsername(userName)).map(UserInfo::getUserId).orElse(null);
     }
 }
